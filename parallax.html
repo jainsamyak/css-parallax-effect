@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Parallax Effect</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .container{
+            position: relative;
+            min-height: 100vh;
+            min-width: 100%;
+            background: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .parallax{
+            background: url('image_2.jpg');
+            background-size: cover;
+            color: white;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Your text here
+        <div class="float btn"><button></button></div>
+    </div>
+    <div class="container parallax">
+        Parallax Container
+    </div>
+    <div class="container">
+            Your text here
+        </div>
+</body>
+</html>
