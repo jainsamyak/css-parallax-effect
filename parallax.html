@@ -21,23 +21,66 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         .parallax{
-            background: url('image_2.jpg');
+            background: url('images/image_2.jpg');
             background-size: cover;
             color: white;
             background-attachment: fixed;
+        }
+        .float{
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            left: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .btn{
+            background: url('images/float-down.png');
+            width: 30px;
+            height: 30px;
+            background-size: contain;
+            transition: all 300ms;
+            background-repeat: no-repeat;
+            animation: jump 800ms ease-in-out infinite alternate;
+        }
+        .btn:hover{
+            cursor: pointer;
+        }
+        .footer{
+            
+        }
+        @keyframes jump{
+            from{
+                transform: translateY(-10px);
+            }
+            to{
+                transform: translateY(0px);
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         Your text here
-        <div class="float btn"><button></button></div>
+        
+        <div class="float">
+            <div class="btn" onclick="scroll_down('parallax')"></div>
     </div>
-    <div class="container parallax">
+        
+    </div>
+    <div class="container parallax" id="parallax">
         Parallax Container
     </div>
     <div class="container">
             Your text here
         </div>
+        <div class="footer">
+
+        </div>
 </body>
+<script>
+    function scroll_down(id_to_div){
+        document.getElementById(id_to_div).scrollIntoView();
+    }
+</script>
 </html>
